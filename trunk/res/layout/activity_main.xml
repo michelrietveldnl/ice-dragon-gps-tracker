@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="0dip"
+    android:layout_margin="0dip"
+    >
+
+<ScrollView
+    android:id="@+id/ScrollViewMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/RelativeLayoutControls"
+    >
+
+    <TableLayout android:layout_margin="0dip" android:padding="0dip" android:stretchColumns="1"   android:id="@+id/TableLayoutSettings" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+		<TableRow android:layout_width="match_parent" android:layout_height="wrap_content" >
+			<TextView android:layout_margin="0dip" android:padding="10dip" android:textColor="#FFFFFF" android:layout_span="2" android:layout_width="match_parent" android:background="#0099CC" android:layout_height="match_parent" android:text="GPS SETTINGS"></TextView>
+		</TableRow>
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1" android:layout_width="0dip" android:layout_height="wrap_content" android:text="GPS Check Every:"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewCheckEvery"></TextView>
+		</TableRow>
+        <TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content">
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="GPS Check Length)"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewCheckLength"></TextView>            
+        </TableRow>
+        <TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content">
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="Accuracy Threshold:"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewAccuracyThreshold"></TextView>            
+        </TableRow>
+                
+		<TableRow android:layout_marginTop="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+			<TextView android:padding="10dip" android:textColor="#FFFFFF" android:layout_span="2" android:layout_width="match_parent" android:background="#0099CC" android:layout_height="match_parent" android:text="SMS SETTINGS"></TextView>
+		</TableRow>        
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="SMS Enabled:"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewSMSEnabled"></TextView>
+		</TableRow>		
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="SMS Number:"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewSMSNumber"></TextView>
+		</TableRow>		
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="SMS Delay:"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewSMSDelay"></TextView>
+		</TableRow>		
+		
+		<TableRow  android:layout_marginTop="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+			<TextView android:padding="10dip" android:textColor="#FFFFFF" android:layout_span="2" android:layout_width="match_parent" android:background="#0099CC" android:layout_height="match_parent" android:text="DATA SETTINGS"></TextView>
+		</TableRow> 
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="Track Name:"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewTrackName"></TextView>
+		</TableRow>		
+
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="Log Path:"></TextView>
+		    <TextView android:maxLines="1" android:singleLine="true" android:ellipsize="start" android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewLogPath"></TextView>
+		</TableRow>		
+						
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="HTTP Enabled:"></TextView>
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:id="@+id/TextViewHttpEnabled"></TextView>
+		</TableRow>			
+		
+		<TableRow android:padding="5dip" android:layout_width="match_parent" android:layout_height="wrap_content" >
+		    <TextView android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content" android:text="HTTP Endpoint"></TextView>
+		    <TextView android:maxLines="1" android:singleLine="true" android:ellipsize="start" android:layout_weight="1"  android:layout_width="0dip" android:layout_height="wrap_content"  android:id="@+id/TextViewHttpEndpoint"></TextView>
+		</TableRow>
+				
+    </TableLayout>
+    </ScrollView>
+    <RelativeLayout android:background="#E2F4FB" android:padding="15dip"  android:gravity="center" android:layout_alignParentBottom="true" android:id="@+id/RelativeLayoutControls" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button
+        android:id="@+id/ButtonStartService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Tracking"
+        android:textSize="13dip" 
+        android:layout_marginRight="15dip"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/ButtonEndService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ButtonStartService"
+        android:enabled="false"
+        android:text="End Tracking"
+        android:textSize="13dip" >
+    </Button>
+        
+    </RelativeLayout>
+    
+    
+    
+    
+</RelativeLayout>

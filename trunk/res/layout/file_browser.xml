@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textViewFilePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0099CC"
+        android:padding="10dip"
+        android:text="Select Path"
+        android:textColor="#FFFFFF" >
+    </TextView>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/RelativeLayoutControls"
+        android:layout_below="@+id/textViewFilePath" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayoutControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/buttonSelectPath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Folder" />
+
+        <Button
+            android:id="@+id/buttonCreateFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_toRightOf="@+id/buttonSelectPath"
+            android:text="Create Folder" />
+    </RelativeLayout>
+
+</RelativeLayout>
