@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="GPS Settings" >
+        <EditTextPreference
+            android:defaultValue="120"
+            android:inputType="number"
+            android:key="PrefCheckEvery"
+            android:summary="How often the GPS should check for updates in seconds"
+            android:title="Check Every" />
+        <EditTextPreference
+            android:defaultValue="15"
+            android:inputType="number"
+            android:key="PrefCheckLength"
+            android:summary="Set how long the GPS will stay enabled during each check in seconds."
+            android:title="Check Length" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:dialogMessage="Send location if the accuracy of the GPS is less than the entered amount of meters."
+            android:inputType="number"
+            android:key="PrefAccuracyThreshhold"
+            android:summary="Update the GPS coordinates if the accuracy is better than the indicated value."
+            android:title="Accuracy Threshold" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="SMS Settings" >
+        <CheckBoxPreference
+            android:disableDependentsState="false"
+            android:key="PrefEnableMMS"
+            android:summary="Allow the device to send SMS updates with it&apos;s GPS location."
+            android:title="Enable SMS Messenging" />
+
+        <EditTextPreference
+            android:dependency="PrefEnableMMS"
+            android:inputType="number"
+            android:key="PrefSMSPhone"
+            android:summary="The phone number you wish to send SMS messages to"
+            android:title="SMS Phone Number" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:dependency="PrefEnableMMS"
+            android:inputType="number"
+            android:key="PrefSMSDelay"
+            android:summary="After starting the service how long should the device wait to send SMS in seconds."
+            android:title="SMS Delay" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Data Settings" >
+        <EditTextPreference
+            android:inputType="text"
+            android:key="PrefReportingKey"
+            android:summary="The unique string that will indentify the data being sent to the server."
+            android:title="Track Name" />
+
+        <Preference
+            android:key="PrefFileSavePath"
+            android:summary="Set path to save the stats to on the local device in a comma delimited file."
+            android:title="Local Log Save Path" />
+
+        <CheckBoxPreference
+            android:key="PrefEnableHTTP"
+            android:summary="Enable the sending of reporting to an HTTP server."
+            android:title="Enable HTTP Reporting" />
+
+        <EditTextPreference
+            android:inputType="textUri"
+            android:dependency="PrefEnableHTTP"
+            android:dialogMessage="Enter the URL that will receive HTTP calls with data points."
+            android:dialogTitle="HTTP URL"
+            android:key="PrefHTTPUrl"
+            android:summary="The URL the application will send GPS information to."
+            android:title="HTTP Reporting URL" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Service Settings">
+        <CheckBoxPreference android:key="PrefStartServiceOnReboot" android:summary="If the device is rebooted restore the state of the service on startup." android:title="Restart Service on Reboot" android:defaultValue="true"/>
+    </PreferenceCategory>
+
+ <PreferenceCategory android:title="Information">
+        <Preference android:key="manual" android:title="User Manual" android:summary="Download the Ice Dragon User Manual.">
+    	</Preference>
+        <Preference android:key="project" android:title="Project Page" android:summary="Learn more about the Ice Dragon HAB Project.">
+    	</Preference>    	
+    </PreferenceCategory>
+</PreferenceScreen>

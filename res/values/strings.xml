@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">Ice Dragon GPS Tracker</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Ice Dragon</string>
+
+</resources>
